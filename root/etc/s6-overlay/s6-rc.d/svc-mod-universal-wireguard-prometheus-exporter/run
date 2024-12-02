@@ -2,4 +2,4 @@
 # shellcheck shell=bash
 
 exec \
-    prometheus_wireguard_exporter
+    /usr/bin/prometheus_wireguard_exporter
