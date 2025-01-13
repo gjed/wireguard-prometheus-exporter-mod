@@ -3,6 +3,7 @@
 ## Buildstage ##
 FROM rust:bookworm AS buildstage
 
+
 ENV EXPORTER_VERSION=3.6.6
 
 
@@ -21,6 +22,7 @@ COPY root/ /root_level/
 FROM scratch
 
 LABEL maintainer="gjed"
+LABEL org.opencontainers.image.source=https://github.com/gjed/wireguard-prometheus-exporter-mod
 
 # Add files from buildstage
 COPY --from=buildstage /root_level/ /
