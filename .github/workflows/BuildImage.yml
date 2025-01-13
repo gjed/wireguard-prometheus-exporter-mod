@@ -47,6 +47,12 @@ jobs:
       MULTI_ARCH: ${{ steps.outputs.outputs.MULTI_ARCH }}
       MOD_VERSION: ${{ steps.outputs.outputs.MOD_VERSION }}
       MOD_VERSION_OVERRIDE: ${{ steps.outputs.outputs.MOD_VERSION_OVERRIDE }}
+  
+  login:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Log in to GitHub Container Registry
+      run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ secrets.CR_USER }} --password-stdin
 
   build:
     uses: linuxserver/github-workflows/.github/workflows/docker-mod-builder.yml@v1
