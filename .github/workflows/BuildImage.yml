@@ -12,7 +12,8 @@ on:
 
 env:
   GITHUB_REPO: "gjed/wireguard-prometheus-exporter-mod" #don't modify
-  ENDPOINT: "gjed/wireguard-prometheus-exporter-mod" #don't modify
+  ENDPOINT: "gjed07/wireguard-prometheus-exporter-mod" #don't modify
+  BRANCH: "gjed/wireguard-prometheus-exporter-mod"
   BASEIMAGE: "wireguard" #replace
   MODNAME: "prometheus-exporter" #replace
   MOD_VERSION: ${{ inputs.mod_version }} #don't modify
