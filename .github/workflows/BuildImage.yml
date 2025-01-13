@@ -11,8 +11,9 @@ on:
         required: false
 
 env:
-  GITHUB_REPO: "linuxserver/docker-mods" #don't modify
-  ENDPOINT: "linuxserver/mods" #don't modify
+  GITHUB_REPO: "gjed/wireguard-prometheus-exporter-mod" #don't modify
+  ENDPOINT: "gjed07/wireguard-prometheus-exporter-mod" #don't modify
+  BRANCH: "wireguard-prometheus-exporter-mod"
   BASEIMAGE: "wireguard" #replace
   MODNAME: "prometheus-exporter" #replace
   MOD_VERSION: ${{ inputs.mod_version }} #don't modify
